@@ -1,6 +1,7 @@
-import AppMenu from '../AppMenu/AppMenu';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import AppMenu from '../AppMenu/AppMenu';
+
 import { LayoutPage } from './Layout.styled';
 
 const Layout = () => {

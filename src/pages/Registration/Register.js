@@ -1,3 +1,6 @@
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/operations';
+
 import {
   RegistrationBox,
   RegistrationForm,
@@ -6,12 +9,6 @@ import {
   RegistrationLabel,
   RegistrationTitle,
 } from './Registration.styled';
-// import VisibilityIcon from '@mui/icons-material/Visibility';
-// import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-// import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { register } from '../../redux/operations';
-// import { SlHome } from 'react-icons/sl';
 
 const Registration = () => {
   // const [passwordType, setPasswordType] = useState('password');
