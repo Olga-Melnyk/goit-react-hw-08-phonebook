@@ -26,13 +26,13 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Main />}></Route>
+          <Route index element={<Main />} />
           <Route
             path="/login"
             element={
               <RestrictedRoute redirectTo="/contacts" component={<LogIn />} />
             }
-          ></Route>
+          />
           <Route
             path="/register"
             element={
@@ -41,13 +41,13 @@ const App = () => {
                 component={<Registration />}
               />
             }
-          ></Route>
+          />
           <Route
             path="/contacts"
             element={
               <PrivateRoute redirectTo="/login" component={<Contacts />} />
             }
-          ></Route>
+          />
         </Route>
       </Routes>
     </>

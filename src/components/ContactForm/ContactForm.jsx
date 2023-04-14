@@ -2,6 +2,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 
@@ -21,7 +22,7 @@ const RecipeSchema = Yup.object().shape({
       excludeEmptyString: true,
     })
     .required('Required'),
-  phone: Yup.string()
+  number: Yup.string()
     .matches(
       /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
       {
@@ -39,7 +40,7 @@ export const ContactForm = () => {
 
   const initialValues = {
     name: '',
-    phone: '',
+    number: '',
   };
 
   const handleSubmit = (values, actions) => {
@@ -48,16 +49,33 @@ export const ContactForm = () => {
     );
 
     if (addedContacts.length) {
-      alert(`${values.name} is already in contacts`);
+      Notify.warning(`${values.name} is already in contacts`);
     } else {
       dispatch(addContact(values));
       console.log(values);
       actions.resetForm({
         name: '',
-        phone: '',
+        number: '',
       });
     }
   };
+
+  // const handleSubmit = (values, actions) => {
+  //   const addedContacts = contacts.filter(
+  //     contact => contact.name.toLowerCase() === values.name.toLowerCase()
+  //   );
+
+  //   if (addedContacts.length) {
+  //     Notify.warning(`${values.name} is already in contacts`);
+  //   } else {
+  //     dispatch(addContact(values));
+  //     console.log(values);
+  //     actions.resetForm({
+  //       name: '',
+  //       number: '',
+  //     });
+  //   }
+  // };
 
   return (
     <Formik
@@ -75,8 +93,8 @@ export const ContactForm = () => {
         </Label>
         <Label>
           Number
-          <Input type="tel" name="phone" />
-          <ErrorForm name="phone" component="span" />
+          <Input type="tel" name="number" />
+          <ErrorForm name="number" component="span" />
         </Label>
 
         <FormBtn type="submit">Add contact</FormBtn>

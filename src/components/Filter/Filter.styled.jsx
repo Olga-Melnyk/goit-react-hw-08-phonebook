@@ -1,17 +1,24 @@
 import styled from 'styled-components';
 
+export const FilterBox = styled('div')`
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const FilterText = styled.p`
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  font-weight: 600;
+  font-size: 20px;
 `;
 
 export const FilterInput = styled.input`
-  display: block;
-  margin-left: 10px;
-  padding-left: 4px;
-  :hover {
-    scale: 1.05;
+  padding: 10px 10px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0px 2px 18px 0px grey;
+  border-radius: 25px;
+  &:focus {
+    outline: none;
   }
 `;

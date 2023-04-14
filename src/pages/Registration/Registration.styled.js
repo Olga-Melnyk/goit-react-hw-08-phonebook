@@ -47,14 +47,3 @@ export const RegistrationButton = styled('button')`
   cursor: pointer;
   color: white;
 `;
-// export const PasswordBox = styled('div')`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `;
-// export const VisibilityButton = styled('button')`
-//   background-color: transparent;
-//   border: none;
-//   padding: 0;
-//   cursor: pointer;
-// `;

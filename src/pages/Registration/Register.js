@@ -11,7 +11,6 @@ import {
 } from './Registration.styled';
 
 const Registration = () => {
-  // const [passwordType, setPasswordType] = useState('password');
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -27,14 +26,6 @@ const Registration = () => {
     form.reset();
   };
 
-  // const changePasswordType = e => {
-  //   e.preventDefault();
-  //   if (passwordType === 'text') {
-  //     setPasswordType('password');
-  //     return;
-  //   }
-  //   setPasswordType('text');
-  // };
   return (
     <RegistrationBox>
       <RegistrationForm autoComplete="off" onSubmit={handleSubmit}>

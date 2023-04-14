@@ -2,23 +2,28 @@ import styled from 'styled-components';
 
 export const Item = styled.li`
   display: flex;
-  gap: 8px;
-  :not(:last-child) {
-    margin-bottom: 10px;
-  }
+  justify-content: space-between;
+  align-items: center;
 `;
 
-export const Span = styled.span`
-  font-size: 18px;
-  padding: 1px;
+export const SpanContact = styled.span`
+  font-size: 20px;
+  font-weight: 400;
+  width: 180px;
+`;
+
+export const NumberContact = styled('span')`
+  font-weight: 600;
+  font-size: 20px;
 `;
 
 export const Button = styled.button`
-  padding: 1px 2px;
-  border: 1px solid black;
-  background-color: transparent;
-  font-size: 16px;
-  :hover {
-    scale: 1.05;
-  }
+  padding: 8px;
+  display: inline-flex;
+  font-size: 20px;
+  border: none;
+  background-color: #dc143c;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
 `;

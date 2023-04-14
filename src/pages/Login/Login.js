@@ -11,17 +11,7 @@ import {
 } from './Login.styled';
 
 const LogIn = () => {
-  //   const [passwordType, setPasswordType] = useState('password');
   const dispatch = useDispatch();
-
-  //   const changePasswordType = e => {
-  //     e.preventDefault();
-  //     if (passwordType === 'text') {
-  //       setPasswordType('password');
-  //       return;
-  //     }
-  //     setPasswordType('text');
-  //   };
 
   const handleSubmit = e => {
     e.preventDefault();

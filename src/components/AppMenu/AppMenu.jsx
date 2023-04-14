@@ -27,12 +27,10 @@ const AppMenu = () => {
         <NavMenu>
           <HomeButton to="/">
             <SlHome />
-            {/* <HomeIcon sx={{ fontSize: 45 }} /> */}
           </HomeButton>
           {isLoggedIn && (
             <ContactsButton to="/contacts">
               <SlCallEnd />
-              {/* <PersonIcon sx={{ fontSize: 45 }} /> */}
             </ContactsButton>
           )}
         </NavMenu>
